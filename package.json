@@ -9,44 +9,45 @@
     "preview": "vite preview"
   },
   "contributors": [
-		{
-			"name": "Alejandro Restuccia",
-			"url": "https://github.com/ceaale"
-		},
     {
-			"name": "Alejandro Toussaint",
-			"url": "https://github.com/"
-		},
+      "name": "Alejandro Restuccia",
+      "url": "https://github.com/ceaale"
+    },
     {
-			"name": "Andrea Segura",
-			"url": "https://github.com/"
-		},
+      "name": "Alejandro Toussaint",
+      "url": "https://github.com/"
+    },
     {
-			"name": "Antonella Duca",
-			"url": "https://github.com/anto-duca"
-		},
+      "name": "Andrea Segura",
+      "url": "https://github.com/"
+    },
     {
-			"name": "Carlos Aliano",
-			"url": "https://github.com/"
-		},
+      "name": "Antonella Duca",
+      "url": "https://github.com/anto-duca"
+    },
     {
-			"name": "Leandro Sabus",
-			"url": "https://github.com/leasabus "
-		},
-		{
-			"name": "Emmanuel Leyan Guacache Rodríguez",
-			"url": "https://github.com/LeyCod"
-		},
-		{
-			"name": "Maximiliano Yañez",
-			"url": "https://github.com/triploide"
-		}
-	],
+      "name": "Carlos Aliano",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Leandro Sabus",
+      "url": "https://github.com/leasabus "
+    },
+    {
+      "name": "Emmanuel Leyan Guacache Rodríguez",
+      "url": "https://github.com/LeyCod"
+    },
+    {
+      "name": "Maximiliano Yañez",
+      "url": "https://github.com/triploide"
+    }
+  ],
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
