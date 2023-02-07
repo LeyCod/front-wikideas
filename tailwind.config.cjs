@@ -12,6 +12,7 @@ module.exports = {
       'bg-footer': '#001b4d',
       'buttons': '#377dff',
       'alternative': '#ea5e60',
+      'selected': '#fff'
     },
     fontFamily: {
       lato: ['Lato', 'sans-serif'],
