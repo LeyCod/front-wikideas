@@ -9,8 +9,10 @@ module.exports = {
       'title': '#1e2022',
       'subtitle': '#677788',
       'cards': '#001b4d',
+      'navbar-text': '#001b4d',
       'bg-footer': '#001b4d',
       'buttons': '#377dff',
+      'nabvar-active': '#377dff',
       'alternative': '#ea5e60',
       'selected': '#fff'
     },
