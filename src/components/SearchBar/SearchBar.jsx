@@ -1,6 +1,0 @@
-const SearchBar = () => {
-    return (
-        <>
-        </>
-    )
-}
