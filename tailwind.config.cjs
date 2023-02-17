@@ -20,10 +20,10 @@ module.exports = {
       lato: ['Lato', 'sans-serif'],
     },
     fontSize: {
-      titleSize: '46px',
-      subtitleSize: '24px',
-      cardsSize: '21px',
-      normalText: '16px'
+      titleSize: '2.875rem',
+      subtitleSize: '1.5rem',
+      cardsSize: '1.313rem',
+      normalText: '1rem'
     }
   },
   plugins: [],
