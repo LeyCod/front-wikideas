@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Search } from './Search'
 
 export const Home = () => {
     return (
         <div className='flex flex-col items-center justify-center'>
+            <Search />
             <h1 className='text-title text-titleSize'>Wiki<span className='text-alternative'>TOT</span></h1>
             <h4 className='text-subtitle text-subtitleSize'>Ejemplo de subtitulo</h4>
             <span className='text-cards text-cardsSize'>Titulo de card</span>
