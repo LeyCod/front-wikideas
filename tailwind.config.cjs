@@ -17,7 +17,7 @@ module.exports = {
       'selected': '#fff'
     },
     fontFamily: {
-      lato: ['Lato', 'sans-serif'],
+      sans: ['Lato', 'sans-serif'],
     },
     fontSize: {
       titleSize: '2.875rem',
