@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavBar } from './components/NavBar'
+import { Search } from './components/Search'
 import { AppRoutes } from './routes/AppRoutes'
 
 
@@ -7,7 +8,10 @@ import { AppRoutes } from './routes/AppRoutes'
 export const App = () => {
   return (
     <>
-      <NavBar />
+      <div className='flex flex-col md:flex-row'>
+        <NavBar />
+        <Search />
+      </div>
       {/* Renderizado del componente de las rutas */}
       <AppRoutes />
     </>
