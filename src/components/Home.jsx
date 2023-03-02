@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Footer } from './Footer'
 import { Search } from './Search'
 
 export const Home = () => {
@@ -15,6 +16,7 @@ export const Home = () => {
             <h2>Ejemplos de rutas</h2>
             <Link className='bg-buttons' to="card">Ejemplo de ruta 1</Link>
             <Link className='bg-buttons' to="article">Ruta 2</Link>
+            <Footer/>
         </div>
     )
 }
