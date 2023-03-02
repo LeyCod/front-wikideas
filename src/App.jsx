@@ -1,5 +1,7 @@
 import React from 'react'
+import { Footer } from './components/Footer'
 import { NavBar } from './components/NavBar'
+import { Search } from './components/Search'
 import { AppRoutes } from './routes/AppRoutes'
 
 
@@ -7,7 +9,11 @@ import { AppRoutes } from './routes/AppRoutes'
 export const App = () => {
   return (
     <>
-      <NavBar />
+      <div className='flex flex-col md:flex-row'>
+        <NavBar />
+        <Search />
+        <Footer />
+      </div>
       {/* Renderizado del componente de las rutas */}
       <AppRoutes />
     </>
