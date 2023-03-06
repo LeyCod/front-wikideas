@@ -23,7 +23,8 @@ module.exports = {
       titleSize: '2.875rem',
       subtitleSize: '1.5rem',
       cardsSize: '1.313rem',
-      normalText: '1rem'
+      normalText: '1rem',
+      smallText: '0.87rem'
     }
   },
   plugins: [],
