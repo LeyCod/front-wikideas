@@ -14,7 +14,6 @@ export const App = () => {
         <Search />
       </div>
       {/* Renderizado del componente de las rutas */}
-      <AppRoutes />
       <Footer />
     </>
   )
