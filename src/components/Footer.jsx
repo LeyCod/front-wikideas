@@ -24,7 +24,7 @@ export const Footer = () => {
             <Link to="/" className="h-8 w-8 bg-alternative flex flex-row justify-center items-center rounded mr-2">
                 <AiOutlineTwitter className="text-selected text-cardsSize"/>
             </Link>
-            <Link to="/" className="h-8 w-8 bg-alternative flex flex-row justify-center items-center rounded">
+            <Link className="h-8 w-8 bg-alternative flex flex-row justify-center items-center rounded">
                 <AiOutlineGithub className="text-selected text-cardsSize"/>
             </Link>
         </footer>

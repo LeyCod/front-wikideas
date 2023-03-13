@@ -14,7 +14,8 @@ module.exports = {
       'buttons': '#377dff',
       'nabvar-active': '#377dff',
       'alternative': '#ea5e60',
-      'selected': '#fff'
+      'selected': '#fff',
+
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
