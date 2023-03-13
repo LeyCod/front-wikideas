@@ -6,7 +6,7 @@ import { Card } from './Card'
 export const Home = () => {
     return (
         <>
-            <div className='flex flex-col w-full p-4  items-start '>
+            <div className='flex flex-col w-full p-4 items-start'>
 
                 <h1 className='text-title text-titleSize'>Destacados</h1>
                 <h4 className='text-subtitle text-subtitleSize'>Lo más relevante de cada semana</h4>
