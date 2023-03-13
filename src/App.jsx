@@ -11,9 +11,11 @@ export const App = () => {
     <>
       <div className='flex flex-col md:flex-row'>
         <NavBar />
-        <Search />
+        <div className='flex flex-col'>
+          <Search />
+          <AppRoutes />
+        </div>
       </div>
-      {/* Renderizado del componente de las rutas */}
       <Footer />
     </>
   )

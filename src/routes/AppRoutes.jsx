@@ -2,7 +2,8 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { CreateArticle } from '../components/CreateArticle'
 import { EditArticle } from '../components/EditArticle'
-import { Home } from '../components/Home'
+import { Home } from '../components/home/Home'
+
 import { SearchResults } from '../components/SearchResults'
 import { ViewArticle } from '../components/ViewArticle'
 

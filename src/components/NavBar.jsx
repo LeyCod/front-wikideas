@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     return (
-        <div className=' w-[25%] h-[100vh] flex flex-col items-center justify-start   '>
+        <div className=' w-[30%] h-[100%]  flex flex-col items-center justify-start   '>
             <nav>
                 <div className='flex flex-col items-center'>
                     <img className='mt-4' src={logo} width={90}></img>
                     <h1 className='text-title text-titleSize font-bold -m-2'>TOT</h1>
-                    <p className='text-smallText text-alternative'>Total de articulos</p>
+                    <p className='text-smallText text-alternative'>10.152 artículos</p>
                 </div>
-                <div className='flex flex-col gap-6 mt-6'>
+                <div className='flex flex-col gap-6 mt-8'>
                     <Link to="create" className='flex flex-row gap-2 place-items-center text-alternative hover:text-nabvar-active text-cardsSize'>
-                        <AiOutlineEdit className='text-title' />
-                        <p>Crear artículo</p>
+                        <AiOutlineEdit size={20} className='text-title' />
+                        <p className='text-alternative'>Crear artículo</p>
                     </Link>
-                    <hr className='text-subtitle opacity-30' />
+                    <hr className='text-subtitle opacity-25' />
                     <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active'>
-                        <AiOutlineHome />
-                        <p>Inicio</p>
+                        <AiOutlineHome size={20} />
+                        <p >Inicio</p>
                     </Link>
                     <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active'>
-                        <AiOutlineBell />
+                        <AiOutlineBell size={20} />
                         <p>Últimos ingresos</p>
                     </Link>
                     <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active'>
-                        <AiOutlineEye />
+                        <AiOutlineEye size={20} />
                         <p>Más visitados</p>
                     </Link>
                 </div>
