@@ -31,20 +31,20 @@ export const NavBar = () => {
             <ul className='hidden md:flex flex-col'>
 
                 <div className='flex flex-col gap-6 mt-8'>
-                    <Link to="create" className='flex flex-row gap-2 place-items-center text-alternative hover:text-nabvar-active text-cardsSize hover:-translate-y-1 transition-all ease-in'>
+                    <Link to="create" className='flex flex-row gap-2 place-items-center text-alternative hover:text-nabvar-active text-cardsSize '>
                         <AiOutlineEdit size={20} className='text-title' />
                         <p className='text-alternative'>Crear artículo</p>
                     </Link>
                     <hr className='text-subtitle opacity-25' />
-                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active hover:-translate-y-1 transition-all ease-in'>
+                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineHome size={20} />
                         <p >Inicio</p>
                     </Link>
-                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active hover:-translate-y-1 transition-all ease-in'>
+                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineBell size={20} />
                         <p>Últimos ingresos</p>
                     </Link>
-                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active hover:-translate-y-1 transition-all ease-in'>
+                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineEye size={20} />
                         <p>Más visitados</p>
                     </Link>
