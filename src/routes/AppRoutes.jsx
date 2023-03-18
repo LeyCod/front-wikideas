@@ -1,11 +1,11 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { CreateArticle } from '../components/CreateArticle'
-import { EditArticle } from '../components/EditArticle'
-import { Home } from '../components/home/Home'
+import { CreateArticle } from '../pages/CreateArticle'
+import { EditArticle } from '../pages/EditArticle'
+import { Home } from '../pages/Home'
 
-import { SearchResults } from '../components/SearchResults'
-import { ViewArticle } from '../components/ViewArticle'
+import { SearchResults } from '../pages/SearchResults'
+import { ViewArticle } from '../pages/ViewArticle'
 
 export const AppRoutes = () => {
     return (

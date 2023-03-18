@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/TOT-icon.png'
+import logo from '../../assets/images/TOT-icon.png'
 import {
     AiOutlineMenu, AiOutlineClose, AiOutlineEdit,
     AiOutlineHome, AiOutlineBell, AiOutlineEye
