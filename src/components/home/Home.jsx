@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../Card'
+import { FeaturedArticles } from './FeaturedArticles'
 import { HomeImage } from './HomeImage'
 
 
@@ -12,7 +13,7 @@ export const Home = () => {
                     <h1 className='text-title text-titleSize'>Destacados</h1>
                     <h4 className='text-subtitle text-subtitleSize'>Lo más relevante de cada semana</h4>
                 </div>
-                <Card />
+                <FeaturedArticles />
 
                 <HomeImage />
                 <div className='flex flex-col text-center '>
