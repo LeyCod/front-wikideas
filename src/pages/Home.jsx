@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card } from '../components/Card'
-import { FeaturedArticles } from '../components/home/FeaturedArticles'
-import { HomeImage } from '../components/home/HomeImage'
+import { FeaturedArticles } from './FeaturedArticles'
+import { HomeImage } from './HomeImage'
+import { LastArticles } from './LastArticles'
 
 export const Home = () => {
     return (
@@ -10,11 +10,8 @@ export const Home = () => {
                 <FeaturedArticles />
 
                 <HomeImage />
-                <div className='flex flex-col text-center '>
-                    <h1 className='text-title text-titleSize'>Últimos temas</h1>
-                    <h4 className='text-subtitle text-subtitleSize'>Lo nuevo de la comunidad</h4>
-                </div>
-                <Card />
+
+                <LastArticles />
             </div>
         </>
     )
