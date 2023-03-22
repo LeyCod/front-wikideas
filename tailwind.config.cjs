@@ -15,6 +15,7 @@ module.exports = {
       'nabvar-active': '#377dff',
       'alternative': '#ea5e60',
       'selected': '#fff',
+      'image-home': '#a2d2ff',
 
     },
     fontFamily: {

@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.rotated-3d-left {
+    transform: perspective(1140px) rotateX(7deg) rotateY(-17deg) rotateZ(4deg);
+}
