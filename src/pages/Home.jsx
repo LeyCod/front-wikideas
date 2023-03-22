@@ -1,7 +1,9 @@
 import React from 'react'
-import { FeaturedArticles } from './FeaturedArticles'
-import { HomeImage } from './HomeImage'
-import { LastArticles } from './LastArticles'
+import { FeaturedArticles } from '../components/home/FeaturedArticles'
+import { HomeImage } from '../components/home/HomeImage'
+import { LastArticles } from '../components/home/LastArticles'
+
+
 
 export const Home = () => {
     return (
