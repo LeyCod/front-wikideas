@@ -19,7 +19,7 @@ export const NavBar = () => {
     }
 
     return (
-        <div className=' w-[30%] h-[100%]  flex flex-row md:flex-col items-center justify-start   '>
+        <div className=' w-[30%] h-[100%]  flex flex-row md:flex-col items-center justify-start    '>
 
             <div className='flex flex-col items-center p-6 mb-6 '>
                 <img className='mt-4 w-[50px] md:w-[100px]' src={logo}  ></img>
@@ -40,7 +40,7 @@ export const NavBar = () => {
                         <AiOutlineHome size={20} />
                         <p >Inicio</p>
                     </Link>
-                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
+                    <Link to="last" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineBell size={20} />
                         <p>Últimos ingresos</p>
                     </Link>

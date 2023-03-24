@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
 export const Card = ({ title, content, views, created }) => {
     return (
         <>
-            <div className='w-[230px] flex flex-col items-center  md:items-start '>
+            <div className='w-[230px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer '>
                 <button className=' w-full h-[3px]  cursor-auto bg-alternative   flex rounded'></button>
 
                 <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}...</h1>
