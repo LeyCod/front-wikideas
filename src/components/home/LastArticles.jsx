@@ -14,7 +14,7 @@ export const LastArticles = () => {
                 <h4 className='text-subtitle text-subtitleSize'>Lo nuevo de la comunidad</h4>
             </div>
 
-            <div className='grid grid-cols-3 gap-6 mt-4'>
+            <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4'>
                 {data.slice(0, 3).map((item, id) => (
                     <Card
                         key={id}

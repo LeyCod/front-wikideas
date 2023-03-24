@@ -5,12 +5,12 @@ import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
 export const Card = ({ title, content, views, created }) => {
     return (
         <>
-            <div className='w-[230px] flex flex-col items-start '>
+            <div className='w-[230px] flex flex-col items-center  md:items-start '>
                 <button className=' w-full h-[3px]  cursor-auto bg-alternative   flex rounded'></button>
 
                 <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}...</h1>
 
-                <p className='mt-6 font-normalText'>{content}</p>
+                <p className='mt-6 font-normalText text-center md:text-start '>{content}</p>
 
                 <div className='flex flex-row gap-12 mt-4'>
                     <div className='flex flex-row items-center gap-1 text-subtitle'>
