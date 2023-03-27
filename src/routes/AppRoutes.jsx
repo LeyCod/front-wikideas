@@ -4,7 +4,7 @@ import { CreateArticle } from '../pages/CreateArticle'
 import { EditArticle } from '../pages/EditArticle'
 import { Home } from '../pages/Home'
 import { LastArticlesComponent } from '../pages/LastArticlesComponent'
-
+import { MoreVisited } from '../pages/MoreVisited'
 import { SearchResults } from '../pages/SearchResults'
 import { ViewArticle } from '../pages/ViewArticle'
 
@@ -19,6 +19,7 @@ export const AppRoutes = () => {
             <Route path="edit" element={<EditArticle />}></Route>
             <Route path="results" element={<SearchResults />}></Route>
             <Route path="last" element={<LastArticlesComponent />}></Route>
+            <Route path="visited" element={<MoreVisited />} ></Route>
         </Routes>
     )
 }

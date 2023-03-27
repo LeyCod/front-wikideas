@@ -1,11 +1,12 @@
 import React from 'react'
 import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
+import 'animate.css';
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
 export const Card = ({ title, content, views, created }) => {
     return (
         <>
-            <div className='w-[230px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer '>
+            <div className='w-[230px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer animate__animated animate__fadeIn '>
                 <button className=' w-full h-[3px]  cursor-auto bg-alternative   flex rounded'></button>
 
                 <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}...</h1>

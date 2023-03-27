@@ -5,9 +5,10 @@ import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
 import 'animate.css';
 
 
-export const LastArticlesComponent = () => {
+export const MoreVisited = () => {
 
     const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
+
 
     const [page, setPage] = useState(1);
     const [numberPage, setNumberPage] = useState(6);
@@ -39,8 +40,8 @@ export const LastArticlesComponent = () => {
         <>
 
             <div className='flex flex-col text-center '>
-                <h1 className='text-title text-titleSize'>Últimos Ingresos</h1>
-                <h4 className='text-subtitle text-subtitleSize'>Recientemente creado por la comunidad</h4>
+                <h1 className='text-title text-titleSize'>Más visitados</h1>
+                <h4 className='text-subtitle text-subtitleSize'>Los más populares de la comunidad</h4>
             </div>
 
             <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4   '>

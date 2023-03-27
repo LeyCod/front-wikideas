@@ -24,7 +24,7 @@ export const NavBar = () => {
             <div className='flex flex-col items-center p-6 mb-6 '>
                 <img className='mt-4 w-[50px] md:w-[100px]' src={logo}  ></img>
                 <h1 className='text-title text-subtitleSize md:text-titleSize font-bold -m-2'>TOT</h1>
-                <p className='text-smallText text-alternative hidden md:flex'>10.152 artículos</p>
+                <p className='text-smallText text-alternative hidden md:flex font-bold'>10.152 artículos</p>
             </div>
 
 
@@ -44,7 +44,7 @@ export const NavBar = () => {
                         <AiOutlineBell size={20} />
                         <p>Últimos ingresos</p>
                     </Link>
-                    <Link to="/" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
+                    <Link to="visited" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineEye size={20} />
                         <p>Más visitados</p>
                     </Link>
