@@ -4,7 +4,7 @@ import { useFetch } from '../hooks/useFetch'
 
 export const FeaturedArticles = () => {
 
-    const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
+    const { data } = useFetch("https://tot.kame-code.com/api/entries/featured");
 
     return (
         <>
@@ -17,7 +17,7 @@ export const FeaturedArticles = () => {
                     <Card
                         key={id}
                         title={item.title.toUpperCase().slice(0, 15)}
-                        content={item.content.slice(0, 200)}
+                        content={item.content.slice(0, 250)}
                         views={item.views}
                         created={item.created_at.slice(0, 10)}
                     />

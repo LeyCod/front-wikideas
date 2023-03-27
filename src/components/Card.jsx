@@ -6,14 +6,14 @@ import 'animate.css';
 export const Card = ({ title, content, views, created }) => {
     return (
         <>
-            <div className='w-[230px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer animate__animated animate__fadeIn '>
+            <div className='w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer animate__animated animate__fadeIn '>
                 <button className=' w-full h-[3px]  cursor-auto bg-alternative   flex rounded'></button>
 
                 <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}...</h1>
 
                 <p className='mt-6 font-normalText text-center md:text-start '>{content}</p>
 
-                <div className='flex flex-row gap-12 mt-4'>
+                <div className='flex flex-row gap-12 mt-8'>
                     <div className='flex flex-row items-center gap-1 text-subtitle'>
                         <AiOutlineEye size={18} />
                         <p>{views}</p>

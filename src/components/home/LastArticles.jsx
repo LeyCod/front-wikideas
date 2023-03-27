@@ -19,7 +19,7 @@ export const LastArticles = () => {
                     <Card
                         key={id}
                         title={item.title.toUpperCase().slice(0, 15)}
-                        content={item.content.slice(0, 200)}
+                        content={item.content.slice(0, 250)}
                         views={item.views}
                         created={item.created_at.slice(0, 10)}
                     />
