@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from '../Card';
 import { useFetch } from '../hooks/useFetch'
+import { Search } from '../partials/Search';
 
 export const FeaturedArticles = () => {
 
@@ -8,6 +9,7 @@ export const FeaturedArticles = () => {
 
     return (
         <>
+
             <div className='flex flex-col text-center '>
                 <h1 className='text-title text-titleSize'>Destacados</h1>
                 <h4 className='text-subtitle text-subtitleSize'>Lo más relevante de cada semana</h4>
