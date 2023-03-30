@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
 import 'animate.css';
-import { Link } from 'react-router-dom';
+
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
 export const Card = ({ title, content, views, created }) => {

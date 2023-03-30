@@ -75,17 +75,17 @@ export const NavBar = () => {
                             <p className='text-selected text-normalText'>Crear artículo</p>
                         </Link>
 
-                        <Link to="create" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link to="/" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineHome size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Inicio</p>
                         </Link>
 
-                        <Link to="create" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link to="last" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineBell size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Últimos ingresos</p>
                         </Link>
 
-                        <Link to="create" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link to="visited" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineEye size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Más visitados</p>
                         </Link>
