@@ -28,7 +28,7 @@ export const Search = () => {
 
 
     return (
-        <div className='flex flex-col  p-4  items-start w-auto  '>
+        <div className='flex flex-col  p-4 items-center md:items-start w-auto  '>
             <div className='flex flex-col  items-center md:items-start  w-full '>
                 <h1 className='text-titleSize font-semibold'>Wiki<span className='text-alternative font-semibold '>TOT</span></h1>
                 <p className='text-subtitle text-cardsSize text-start p-1  '>Somos una enciclopedia entendida como soporte que permite la recopilación, el<br className='hidden md:flex'></br>
@@ -41,11 +41,12 @@ export const Search = () => {
                     className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2'
                     type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                 <button className='bg-buttons text-selected rounded shadow-md mt-2 shadow-title h-10 p-2'><AiOutlineSearch size={20} /></button>
-                {searchTerm !== '' && <button onClick={handleClear}>Limpiar Búsqueda</button>}
+            </div>
+            <div className='mt-6 flex flex-col md:items-start items-center justify-center '>
+                {searchTerm !== '' && <button className='p-1 bg-buttons text-selected rounded ' onClick={handleClear}>Limpiar Búsqueda</button>}
             </div>
 
-
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-4'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8  '>
                 {searchResults.map(result => (
                     <Card
                         key={result.id}
