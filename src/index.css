@@ -7,3 +7,26 @@
 .rotated-3d-left {
     transform: perspective(1140px) rotateX(7deg) rotateY(-17deg) rotateZ(4deg);
 }
+
+.big-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    width: 800px;
+    min-height: 500px;
+    height: auto;
+    padding: 10px;
+    /* Agrega cualquier otro estilo que desees */
+}
+
+.big-card h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+}
+
+.big-card p {
+    color: #677788;
+}

@@ -5,6 +5,12 @@ import { HiCodeBracket } from 'react-icons/hi2'
 import { RiDoubleQuotesL } from 'react-icons/ri'
 
 export const CreateArticle = () => {
+
+    // const makeBoldText = (text) => {
+    //     return <b>{text}</b>
+    // }
+
+
     return (
         <div className='flex flex-col w-full p-4 justify-center items-start '>
             <h1 className='text-subtitleSize' >Editar Artículo</h1>
@@ -12,7 +18,7 @@ export const CreateArticle = () => {
             <h3 className='text-titleSize mt-6'>Título</h3>
             <div className='flex flex-row  items-center md:items-start  w-full '>
                 <input
-                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2' type="text" placeholder="¿Que estás buscando?" ></input>
+                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2' type="text" placeholder="Título del artículo" ></input>
 
             </div>
 
@@ -36,9 +42,8 @@ export const CreateArticle = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe repellendus, iusto incidunt dicta sunt quos repudiandae illum nesciunt culpa modi, earum deleniti? Nostrum facilis itaque libero at et odio sint.
                 </span>
 
-
             </div>
-            <button className='bg-buttons text-selected p-1 rounded mt-4'>Editar Artículo</button>
+            <button className='bg-buttons text-selected p-1 rounded mt-4'>Crear Artículo</button>
 
         </div>
     )

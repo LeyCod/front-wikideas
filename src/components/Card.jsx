@@ -1,32 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
 import 'animate.css';
+import { Link } from 'react-router-dom';
+
 
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
-export const Card = ({ title, content, views, created }) => {
+export const Card = ({ id, title, content, views, created }) => {
+    const isBigCard = id === 2;
     return (
         <>
-            <div className='w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle hover:bg-opacity-40 cursor-pointer animate__animated animate__fadeIn '>
-                <button className=' w-full h-[3px]  cursor-auto bg-alternative   flex rounded'></button>
+            <Link to={`/article/${id}`}>
+                <div key={id}
 
-                <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}...</h1>
+                    className={`w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle  hover:bg-opacity-25 cursor-pointer animate__animated animate__fadeIn ${isBigCard ? 'big-card ' : ''}`}>
 
-                <p className='mt-6 font-normalText text-center md:text-start '>{content}</p>
+                    <button className={` w-full h-[3px]  cursor-auto bg-alternative   flex rounded ${isBigCard ? 'hidden' : ''}`}></button>
 
-                <div className='flex flex-row gap-12 mt-8'>
-                    <div className='flex flex-row items-center gap-1 text-subtitle'>
-                        <AiOutlineEye size={18} />
-                        <p>{views}</p>
+                    <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}</h1>
+
+                    <p className='mt-6 font-normalText text-center md:text-start '>{content}</p>
+
+                    <div className={`flex flex-row gap-12 mt-8 dates justify-between ${isBigCard ? 'justify-between w-[750px]' : ''}`}>
+                        <div className='flex flex-row items-center gap-1 text-subtitle'>
+                            <AiOutlineEye size={18} />
+                            <p>{views}</p>
+                        </div>
+
+                        <div className='flex flex-row items-center gap-1 text-subtitle'>
+                            <AiOutlineCalendar size={18} />
+                            <p>{created}</p>
+                        </div>
+
                     </div>
 
-                    <div className='flex flex-row items-center gap-1 text-subtitle'>
-                        <AiOutlineCalendar size={18} />
-                        <p>{created}</p>
-                    </div>
-                    {/* <Link to='article/${data.id}'><button>view</button></Link> */}
-                </div>
-            </div>
+
+                </div >
+            </Link>
+
         </>
     )
 }

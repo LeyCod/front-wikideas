@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card } from '../Card';
 import { useFetch } from '../hooks/useFetch'
-import { Search } from '../partials/Search';
 
 export const FeaturedArticles = () => {
 
-    const { data } = useFetch("https://tot.kame-code.com/api/entries/featured");
+    const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
 
     return (
         <>
@@ -17,7 +16,8 @@ export const FeaturedArticles = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-4'>
                 {data.slice(0, 3).map((item, id) => (
                     <Card
-                        key={id}
+                        key={item.id}
+                        id={item.id}
                         title={item.title.toUpperCase().slice(0, 15)}
                         content={item.content.slice(0, 250)}
                         views={item.views}

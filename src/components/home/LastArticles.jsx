@@ -7,6 +7,7 @@ export const LastArticles = () => {
     const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
 
 
+
     return (
         <>
             <div className='flex flex-col text-center '>
@@ -15,9 +16,11 @@ export const LastArticles = () => {
             </div>
 
             <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4'>
-                {data.slice(0, 3).map((item, id) => (
+                {data.slice(0, 3).map((item) => (
                     <Card
-                        key={id}
+
+                        key={item.id}
+                        id={item.id}
                         title={item.title.toUpperCase().slice(0, 15)}
                         content={item.content.slice(0, 250)}
                         views={item.views}

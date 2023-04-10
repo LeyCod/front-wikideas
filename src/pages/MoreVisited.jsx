@@ -52,7 +52,8 @@ export const MoreVisited = () => {
                         .map((item, id) => (
 
                             <Card
-                                key={id}
+                                key={item.id}
+                                id={item.id}
                                 title={item.title.toUpperCase().slice(0, 15)}
                                 content={item.content.slice(0, 150)}
                                 views={item.views}
