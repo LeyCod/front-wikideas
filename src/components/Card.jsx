@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineCalendar } from 'react-icons/ai';
 import 'animate.css';
 import { Link } from 'react-router-dom';
@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
-export const Card = ({ id, title, content, views, created }) => {
-    const isBigCard = id === 2;
+export const Card = ({ id, title, content, views, created, isBigCard, onCardClick }) => {
+
     return (
         <>
             <Link to={`/article/${id}`}>
