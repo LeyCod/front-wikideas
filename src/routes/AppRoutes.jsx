@@ -3,10 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import { CreateArticle } from '../pages/CreateArticle'
 import { EditArticle } from '../pages/EditArticle'
 import { Home } from '../pages/Home'
-import { LastArticlesComponent } from '../pages/LastArticlesComponent'
-import { MoreVisited } from '../pages/MoreVisited'
-import { SearchResults } from '../pages/SearchResults'
 import { ViewArticle } from '../pages/ViewArticle'
+import { LastArticlesComponent } from '../pages/LastArticlesComponent'
 
 
 export const AppRoutes = () => {
@@ -17,11 +15,8 @@ export const AppRoutes = () => {
             <Route path='/*' element={<Home />}></Route>
             <Route path="article/:id" element={<ViewArticle />}></Route>
             <Route path="create" element={<CreateArticle />}></Route>
-            <Route path="edit" element={<EditArticle />}></Route>
-            <Route path="results" element={<SearchResults />}></Route>
+            <Route path="edit/:id" element={<EditArticle />}></Route>
             <Route path="last" element={<LastArticlesComponent />}></Route>
-            <Route path="visited" element={<MoreVisited />} ></Route>
-
         </Routes>
     )
 }

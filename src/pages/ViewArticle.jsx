@@ -6,6 +6,7 @@ import { IoMdArrowDropleft } from 'react-icons/io'
 
 
 
+
 export const ViewArticle = () => {
     const [data, setData] = useState([]);
 
@@ -57,7 +58,7 @@ export const ViewArticle = () => {
                             onClick={handleGoBack}
                             className='text-alternative font-bold'>Volver</button>
                     </div>
-                    <Link to="/edit"><button className='bg-buttons p-1 rounded text-selected'>Editar Artículo</button></Link>
+                    <Link to={`/edit/${id}`}><button className='bg-buttons p-1 rounded text-selected'>Editar Artículo</button></Link>
                 </div>
             </div>
 
