@@ -19,7 +19,7 @@ export const Card = ({ id, title, content, views, created, isBigCard, onCardClic
 
                     <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}</h1>
 
-                    <p className='mt-6 font-normalText text-center md:text-start '>{content}</p>
+                    <p className='mt-6 font-normalText text-start md:text-start '>{content}</p>
 
                     <div className={`flex flex-row gap-12 mt-8 dates justify-between ${isBigCard ? 'justify-between w-[750px]' : ''}`}>
                         <div className='flex flex-row items-center gap-1 text-subtitle'>

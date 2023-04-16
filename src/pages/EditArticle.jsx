@@ -75,10 +75,10 @@ export const EditArticle = () => {
                 </div>
 
 
-                <div className='flex flex-col gap-4 items-start p-4 md:p-0  text-subtitle mt-4 '>
+                <div className='flex flex-col gap-4 items-center md:items-start p-4 md:p-0  text-subtitle mt-4 max-w-[1140px] '>
                     <h4 className=' p-4 md:p-0 font-bold text-subtitleSize'>Contenido</h4>
                     <textarea
-                        className='border-none overflow-hidden min-w-[300px] p-4 md:p-0 md:w-[800px] h-[450px]'
+                        className='border-none overflow-hidden text-start w-[350px] md:w-[800px] h-[400px]'
                         id="content"
                         name="content"
                         value={formData.content}

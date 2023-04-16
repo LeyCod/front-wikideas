@@ -38,7 +38,7 @@ export const Search = () => {
             </div>
             <div className='w-full flex flex-row mt-6'>
                 <input
-                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2'
+                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2 bg-subtitle bg-opacity-20'
                     type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                 <button className='bg-buttons text-selected rounded shadow-md mt-2 shadow-title h-10 p-2'><AiOutlineSearch size={20} /></button>
             </div>
@@ -49,6 +49,7 @@ export const Search = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8  '>
                 {searchResults.map(result => (
                     <Card
+                        id={result.id}
                         key={result.id}
                         title={result.title.toUpperCase().slice(0, 15)}
                         content={result.content.slice(0, 250)}
