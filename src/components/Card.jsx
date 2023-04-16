@@ -13,7 +13,7 @@ export const Card = ({ id, title, content, views, created, isBigCard, onCardClic
             <Link to={`/article/${id}`}>
                 <div key={id}
 
-                    className={`w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle  hover:bg-opacity-25 cursor-pointer animate__animated animate__fadeIn ${isBigCard ? 'big-card ' : ''}`}>
+                    className={`w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle  hover:bg-opacity-25 hover:-translate-y-2 ease-in duration-200 cursor-pointer animate__animated animate__fadeIn ${isBigCard ? 'big-card ' : ''}`}>
 
                     <button className={` w-full h-[3px]  cursor-auto bg-alternative   flex rounded ${isBigCard ? 'hidden' : ''}`}></button>
 
