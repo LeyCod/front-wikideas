@@ -44,7 +44,7 @@ export const MoreVisited = () => {
                     <h4 className='text-subtitle text-subtitleSize'>Los más populares de la comunidad</h4>
                 </div>
 
-                <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4   '>
+                <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4 p-6  '>
                     {data.slice(
                         (page - 1) * numberPage,
                         (page - 1) * numberPage + numberPage

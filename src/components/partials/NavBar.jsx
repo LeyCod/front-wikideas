@@ -19,7 +19,7 @@ export const NavBar = () => {
     }
 
     return (
-        <div className=' w-[30%] h-[100%]  flex flex-row md:flex-col items-center justify-start    '>
+        <div className=' w-[20%] h-[100%]    flex flex-row md:flex-col items-center justify-start    '>
 
             <div className='flex flex-col items-center p-6 mb-6 '>
                 <img className='mt-4 w-[50px] md:w-[100px]' src={logo}  ></img>
