@@ -5,6 +5,8 @@ import { EditArticle } from '../pages/EditArticle'
 import { Home } from '../pages/Home'
 import { ViewArticle } from '../pages/ViewArticle'
 import { LastArticlesComponent } from '../pages/LastArticlesComponent'
+import { MoreVisited } from '../pages/MoreVisited'
+import { CreatePopUp } from '../pages/CreatePopUp'
 
 
 export const AppRoutes = () => {
@@ -17,6 +19,8 @@ export const AppRoutes = () => {
             <Route path="create" element={<CreateArticle />}></Route>
             <Route path="edit/:id" element={<EditArticle />}></Route>
             <Route path="last" element={<LastArticlesComponent />}></Route>
+            <Route path="visited" element={<MoreVisited />}></Route>
+            {/* <Route path="/createPopUp" element={<CreatePopUp />}></Route> */}
         </Routes>
     )
 }

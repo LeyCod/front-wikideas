@@ -3,17 +3,23 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { BiBold, BiItalic, BiUnderline, BiStrikethrough, BiListUl } from 'react-icons/bi'
 import { HiCodeBracket } from 'react-icons/hi2'
 import { RiDoubleQuotesL } from 'react-icons/ri'
+import { EditPopUp } from './EditPopUp'
 
 
 export const EditArticle = () => {
     const [data, setData] = useState({ content: '' });
     const [formData, setFormData] = useState({ content: '' })
+    //state para el button
+    const [showPopUp, setShowPopUp] = useState(false);
 
     const { id } = useParams();
 
     const navigate = useNavigate();
 
-
+    //setter para abrir el pop up
+    const handleClick = () => {
+        setShowPopUp(true);
+    };
 
     useEffect(() => {
         fetch(`https://tot.kame-code.com/api/entries/${id}`)
@@ -45,7 +51,9 @@ export const EditArticle = () => {
         })
 
             .then(response => response.json())
+
             .then(() => navigate(`/article/${id}`))
+
             .catch(error => console.error(error));
     };
 
@@ -86,7 +94,8 @@ export const EditArticle = () => {
                     />
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <button className='bg-buttons text-selected p-1 rounded' type="submit">Editar Artículo</button>
+                    <button className='bg-buttons text-selected p-1 rounded' type="submit" onClick={handleClick}>Editar Artículo</button>
+                    {showPopUp && <EditPopUp />}
                     <button className='text-alternative font-bold' type="button" onClick={handleCancel}>Cancelar</button>
                 </div>
             </form>

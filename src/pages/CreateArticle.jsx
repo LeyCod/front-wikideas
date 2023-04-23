@@ -1,11 +1,23 @@
 import React, { useState } from 'react'
 import { BiBold, BiItalic, BiUnderline, BiStrikethrough, BiListUl } from 'react-icons/bi'
 import { HiCodeBracket } from 'react-icons/hi2'
-// import { HiOutlineCodeBracket } from 'react-icons/hi'
 import { RiDoubleQuotesL } from 'react-icons/ri'
+import { CreatePopUp } from './CreatePopUp'
+import { Link } from 'react-router-dom'
 
 export const CreateArticle = () => {
     const [formData, setFormData] = useState({ title: '', content: '' })
+    //state para el button
+    const [showPopUp, setShowPopUp] = useState(false);
+
+    //setter para abrir el pop up
+    const handleClick = () => {
+        setShowPopUp(true);
+    };
+
+    const closePopUp = () => {
+        setShowPopUp(false)
+    }
 
 
     const handleFormChange = event => {
@@ -67,9 +79,15 @@ export const CreateArticle = () => {
                         rows="10"></textarea>
 
                 </div>
+
                 <button
                     type='submit'
-                    className='bg-buttons text-selected p-1 rounded mt-4'>Crear Artículo</button>
+                    className='bg-buttons text-selected p-1 rounded mt-4'
+                    onClick={handleClick}
+                >
+                    Crear Artículo</button>
+                {showPopUp && <CreatePopUp />}
+
             </form>
         </div>
     )

@@ -5,6 +5,7 @@ import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
 import 'animate.css';
 
 
+
 export const LastArticlesComponent = () => {
 
     const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
@@ -20,7 +21,6 @@ export const LastArticlesComponent = () => {
     const totalPages = Math.ceil(totalElements / elementsPerPage);
 
     const ifHasMoreElements = page < totalPages;
-
 
 
     const handleChangePage = () => {
@@ -61,10 +61,11 @@ export const LastArticlesComponent = () => {
 
                         ))}
                 </div>
+
                 {/* ERROR MESSAGE */}
                 {!ifHasMoreElements &&
                     <div className='flex items-center justify-center h-[200px] p-4'>
-                        <p className='text-cardsSize md:text-subtitleSize text-alternative'>No hay más elementos para mostrar.</p>
+                        <p className='text-cardsSize md:text-subtitleSize text-alternative'>No hay más artículos para mostrar.</p>
                     </div>}
                 <div className='flex flex-row items-center justify-center mt-10 gap-3 p-4 font-bold'>
 

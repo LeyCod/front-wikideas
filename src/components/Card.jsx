@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
-export const Card = ({ id, title, content, views, created, isBigCard, onCardClick }) => {
+export const Card = ({ id, title, content, views, created, isBigCard }) => {
 
     return (
         <>

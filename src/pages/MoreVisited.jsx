@@ -38,7 +38,7 @@ export const MoreVisited = () => {
     return (
 
         <>
-            <section className='flex flex-col items-center'>
+            <section className='flex flex-col items-center '>
                 <div className='flex flex-col text-center '>
                     <h1 className='text-title text-titleSize'>Más visitados</h1>
                     <h4 className='text-subtitle text-subtitleSize'>Los más populares de la comunidad</h4>
@@ -65,7 +65,7 @@ export const MoreVisited = () => {
                 {/* ERROR MESSAGE */}
                 {!ifHasMoreElements &&
                     <div className='flex items-center justify-center h-[200px] p-4 '>
-                        <p className='text-cardsSize md:text-subtitleSize text-alternative'>No hay más elementos para mostrar.</p>
+                        <p className='text-cardsSize md:text-subtitleSize text-alternative'>No hay más artículos para mostrar.</p>
                     </div>}
                 <div className='flex flex-row items-center justify-center mt-10 gap-3 p-4 font-bold'>
 
