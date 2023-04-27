@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from '../components/Card';
 import { useFetch } from '../components/hooks/useFetch';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
@@ -7,8 +7,18 @@ import 'animate.css';
 
 
 export const LastArticlesComponent = () => {
+    const [data, setData] = useState([])
 
-    const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
+    const url = "https://demo1-production.up.railway.app/entries/last";
+
+    useEffect(() => {
+        fetch(url)
+            .then((resp) => resp.json())
+            .then((data) => setData(data))
+            .catch((e) => console.error(e))
+    }, [])
+    console.log(data)
+
 
     const [page, setPage] = useState(1);
     const [numberPage, setNumberPage] = useState(6);

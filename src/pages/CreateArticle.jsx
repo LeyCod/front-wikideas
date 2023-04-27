@@ -1,33 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BiBold, BiItalic, BiUnderline, BiStrikethrough, BiListUl } from 'react-icons/bi'
 import { HiCodeBracket } from 'react-icons/hi2'
 import { RiDoubleQuotesL } from 'react-icons/ri'
 import { CreatePopUp } from './CreatePopUp'
-import { Link } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import ReactQuill from 'react-quill';
+import Quill from 'quill';
+import 'react-quill/dist/quill.snow.css'
+
+
+
 
 export const CreateArticle = () => {
     const [formData, setFormData] = useState({ title: '', content: '' })
-    //state para el button
-    const [showPopUp, setShowPopUp] = useState(false);
-
-    //setter para abrir el pop up
-    const handleClick = () => {
-        setShowPopUp(true);
-    };
-
-    const closePopUp = () => {
-        setShowPopUp(false)
-    }
-
+    const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
 
     const handleFormChange = event => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
     };
 
+
     const handleSubmit = event => {
         event.preventDefault();
-        fetch(`https://tot.kame-code.com/api/entries`, {
+        fetch(`https://demo1-production.up.railway.app/entries/store`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,9 +34,10 @@ export const CreateArticle = () => {
         })
 
             .then(response => response.json())
+            .then(navigate("*"))
             .catch(error => console.error(error));
     };
-    console.log(formData)
+
 
     return (
         <div className='flex flex-col w-full p-4 justify-center items-start '>
@@ -56,7 +54,35 @@ export const CreateArticle = () => {
 
                 </div>
 
-                <div className='flex flex-col mt-6'>
+                <div className='h-auto flex items-center md:items-start w-[370px] md:w-full  mt-6'>
+                    <textarea
+                        name="content"
+                        id="content"
+                        value={formData.content}
+                        onChange={handleFormChange}
+                        cols="100"
+                        rows="10"></textarea>
+                </div>
+
+
+            </form>
+            <button
+                className='bg-buttons text-selected p-1 rounded mt-4'
+                onClick={() => setShowPopup(true)}>Crear Artículo</button>
+            <CreatePopUp
+                show={showPopup}
+                onClose={() => setShowPopup(false)}
+                create={handleSubmit}
+            />
+        </div>
+    )
+}
+
+//implementar quillJS
+
+
+
+{/* <div className='flex flex-col mt-6'>
                     <h3 className='text-subtitleSize'>Contenido</h3>
                     <div className='flex flex-row gap-4 items-center  text-subtitle mt-4'>
                         <BiBold size={18} />
@@ -67,28 +93,13 @@ export const CreateArticle = () => {
                         <RiDoubleQuotesL size={18} />
                         <HiCodeBracket size={18} />
                     </div>
-                </div>
+                </div> */}
 
-                <div className='h-auto flex items-start w-[800px] mt-6'>
-                    <textarea
+{/* <ReactQuill
                         name="content"
-                        id="content"
+                        id='content'
+                        theme='snow'
                         value={formData.content}
                         onChange={handleFormChange}
-                        cols="80"
-                        rows="10"></textarea>
 
-                </div>
-
-                <button
-                    type='submit'
-                    className='bg-buttons text-selected p-1 rounded mt-4'
-                    onClick={handleClick}
-                >
-                    Crear Artículo</button>
-                {showPopUp && <CreatePopUp />}
-
-            </form>
-        </div>
-    )
-}
+                    /> */}

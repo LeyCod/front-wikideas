@@ -8,7 +8,7 @@ import { IoMdArrowDropleft } from 'react-icons/io'
 
 
 export const ViewArticle = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState('');
 
     const { id } = useParams();
 
@@ -18,14 +18,16 @@ export const ViewArticle = () => {
         navigate(-1);
     }
 
-
     useEffect(() => {
-        fetch(`https://tot.kame-code.com/api/entries/${id}`)
+        fetch(`https://demo1-production.up.railway.app/entries/${id}`)
             .then(response => response.json())
-            .then(data => setData(data.data))
+            .then(data => setData(data))
             .catch(error => console.error(error));
 
     }, [id])
+    console.log(data)
+
+
 
 
     return (
@@ -33,7 +35,6 @@ export const ViewArticle = () => {
             <div key={id} className=' max-w-[1140px] md:w-[800px] '>
 
                 <div className='flex flex-col items-start md:items-start justify-center px-6 md:p-4 '>
-
 
                     {data.title && <span className='md:text-titleSize text-subtitleSize'>{data.title[0].toUpperCase() + data.title.slice(1)}</span>}
                     <span className='text-subtitle mt-6 text-cardsSize'>{data.content}</span>
@@ -49,7 +50,6 @@ export const ViewArticle = () => {
                     </div>
 
                 </div>
-
 
                 <div className='flex flex-row justify-between items-center   p-4'>
                     <div className='flex flex-row items-center gap-2 text-alternative'>

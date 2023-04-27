@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from '../components/Card';
 import { useFetch } from '../components/hooks/useFetch';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
@@ -7,12 +7,20 @@ import 'animate.css';
 
 export const MoreVisited = () => {
 
-    const { data } = useFetch("https://tot.kame-code.com/api/entries/latest");
-
-
+    const [data, setData] = useState([])
     const [page, setPage] = useState(1);
     const [numberPage, setNumberPage] = useState(6);
     const [hasMoreElements, setHasMoreElements] = useState(true);
+
+    const url = "https://demo1-production.up.railway.app/entries/featured";
+
+
+    useEffect(() => {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error(error))
+    }, [])
 
 
     const elementsPerPage = 6;

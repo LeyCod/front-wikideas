@@ -9,18 +9,13 @@ import { EditPopUp } from './EditPopUp'
 export const EditArticle = () => {
     const [data, setData] = useState({ content: '' });
     const [formData, setFormData] = useState({ content: '' })
-    //state para el button
-    const [showPopUp, setShowPopUp] = useState(false);
+
 
     const { id } = useParams();
 
     const navigate = useNavigate();
 
-    //setter para abrir el pop up
-    const handleClick = () => {
-        setShowPopUp(true);
-    };
-
+    //recupera el articulo por su id
     useEffect(() => {
         fetch(`https://tot.kame-code.com/api/entries/${id}`)
             .then(response => response.json())
@@ -32,13 +27,13 @@ export const EditArticle = () => {
 
     }, [id]);
 
-
+    //target de los inputs
     const handleFormChange = event => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
     };
 
-
+    //define el metodo y edita la entrie por su id, la devuelve en forma de string
     const handleSubmit = event => {
         event.preventDefault();
         fetch(`https://tot.kame-code.com/api/entries/${id}`, {
@@ -94,8 +89,8 @@ export const EditArticle = () => {
                     />
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <button className='bg-buttons text-selected p-1 rounded' type="submit" onClick={handleClick}>Editar Artículo</button>
-                    {showPopUp && <EditPopUp />}
+                    <button className='bg-buttons text-selected p-1 rounded' type="submit">Editar Artículo</button>
+
                     <button className='text-alternative font-bold' type="button" onClick={handleCancel}>Cancelar</button>
                 </div>
             </form>
