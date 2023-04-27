@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer } from './components/partials/Footer'
+import { Footer } from './components/partials/footer/Footer'
 import { NavBar } from './components/partials/NavBar'
 import { Search } from './components/partials/Search'
 import { AppRoutes } from './routes/AppRoutes'

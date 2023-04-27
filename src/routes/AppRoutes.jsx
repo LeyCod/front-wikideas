@@ -6,7 +6,8 @@ import { Home } from '../pages/Home'
 import { ViewArticle } from '../pages/ViewArticle'
 import { LastArticlesComponent } from '../pages/LastArticlesComponent'
 import { MoreVisited } from '../pages/MoreVisited'
-import { CreatePopUp } from '../pages/CreatePopUp'
+
+
 
 
 export const AppRoutes = () => {
