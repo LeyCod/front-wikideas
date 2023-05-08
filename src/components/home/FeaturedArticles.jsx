@@ -24,7 +24,7 @@ export const FeaturedArticles = () => {
                 <h4 className='text-subtitle text-subtitleSize'>Lo más relevante de cada semana</h4>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-4'>
-                {data.map((item, id) => (
+                {data.slice(0, 3).map((item, id) => (
                     <Card
                         key={item.id}
                         id={item.id}

@@ -28,7 +28,7 @@ export const MoreVisited = () => {
 
     const totalPages = Math.ceil(totalElements / elementsPerPage);
 
-    const ifHasMoreElements = page < totalPages;
+    const ifHasMoreElements = page <= totalPages;
 
 
 

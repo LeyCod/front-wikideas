@@ -24,7 +24,7 @@ export const LastArticles = () => {
             </div>
 
             <div className='grid grid-cols-1  md:grid-cols-3 gap-6 mt-4'>
-                {data.map((item) => (
+                {data.slice(0, 3).map((item) => (
                     <Card
                         key={item.id}
                         id={item.id}

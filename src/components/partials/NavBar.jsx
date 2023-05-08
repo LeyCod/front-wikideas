@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../assets/images/TOT-icon.png'
 import {
     AiOutlineMenu, AiOutlineClose, AiOutlineEdit,
-    AiOutlineHome, AiOutlineBell, AiOutlineEye
+    AiOutlineHome, AiOutlineBell, AiOutlineEye, AiOutlineTeam
 } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -47,6 +47,10 @@ export const NavBar = () => {
                     <Link to="visited" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
                         <AiOutlineEye size={20} />
                         <p>Más visitados</p>
+                    </Link>
+                    <Link to="about" className='flex flex-row gap-2 place-items-center  hover:text-nabvar-active '>
+                        <AiOutlineTeam size={20} />
+                        <p>Nosotros</p>
                     </Link>
 
                 </div>

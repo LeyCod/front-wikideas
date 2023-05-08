@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from '../components/Card';
-import { useFetch } from '../components/hooks/useFetch';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
 import 'animate.css';
 
@@ -25,7 +24,7 @@ export const LastArticlesComponent = () => {
     const [hasMoreElements, setHasMoreElements] = useState(true);
 
 
-    const elementsPerPage = 6;
+    const elementsPerPage = 9;
     const totalElements = data.length + 1;
 
     const totalPages = Math.ceil(totalElements / elementsPerPage);

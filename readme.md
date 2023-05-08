@@ -1,0 +1,4 @@
+-Ver q otro modo de notificacion podriamos aplicar
+-Averiguar cuantos caracteres se podrían poner
+-editor de texto
+-tratar de q funcione el hook usefetch
