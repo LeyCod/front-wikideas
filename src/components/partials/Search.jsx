@@ -4,6 +4,9 @@ import { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { Card } from '../Card';
 
+//Tiene que mandar un titulo
+//Definir un metodo de caracteres
+
 export const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -11,7 +14,7 @@ export const Search = () => {
     useEffect(() => {
 
         if (searchTerm.trim() !== '') { // Verificar que el término de búsqueda no está vacío
-            fetch(`https://tot.kame-code.com/api/entries/search?q=${searchTerm}`)
+            fetch(`https://demo1-production.up.railway.app/search?q=${searchTerm}`)
                 .then(response => response.json())
                 .then(data => setSearchResults(data.data))
                 .catch(error => console.error(error));
@@ -34,7 +37,7 @@ export const Search = () => {
                 <p className='text-subtitle text-cardsSize text-start p-1  '>Somos una enciclopedia entendida como soporte que permite la recopilación, el<br className='hidden md:flex'></br>
                     almacenamiento y la transmisión de la información de  forma estructurada y de<br className='hidden md:flex'></br>
                     contenido abierto. ¿Te gustaría participar? comienza ahora crea un tema o explora <br className='hidden md:flex'>
-                    </br>nuestro contenido</p>
+                    </br>nuestro contenido.</p>
             </div>
             <div className='w-full flex flex-row mt-6'>
                 <input

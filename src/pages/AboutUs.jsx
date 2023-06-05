@@ -5,17 +5,18 @@ import about from '../assets/about-us.jpg'
 export const AboutUs = () => {
     return (
         <>
-            <h1 className='text-titleSize flex items-center justify-center'>Nuestro equipo</h1>
+            <h1 className='text-titleSize flex items-center justify-center p-4'>Nuestro equipo</h1>
             <section className='flex flex-col w-full p-4 justify-center items-center md:items-start  '>
 
-                <span className='text-subtitle text-cardsSize md:items-start items-center w-[400px] md:w-[800px]  text-start p-8 md:p-1  '>
-
-                    Somos un equipo altamente capacitado y apasionado por la creación de <b>soluciones digitales de alta calidad</b>. Cada uno de nosotros aporta una habilidad única para lograr un proyecto excepcional.
-
-                    Trabajamos juntos para diseñar y construir la mejor experiencia digital posible. Desde el proyecto hasta la implementación, nuestra prioridad es siempre la satisfacción del cliente.
-
+                <span className='text-subtitle text-cardsSize md:items-start items-center w-[400px] md:w-[850px]  text-start p-8 md:p-4  '>
+                    <p>
+                        Somos un equipo altamente capacitado y apasionado por la creación de <b>soluciones digitales de alta calidad</b>.
+                        Cada uno de nosotros aporta una habilidad única para lograr un proyecto excepcional.
+                    </p>
+                    <p>
+                        Trabajamos juntos para diseñar y construir la mejor experiencia digital posible. Desde el proyecto hasta la implementación, nuestra prioridad es siempre la satisfacción del cliente.
+                    </p>
                     Nuestro equipo está compuesto por expertos en distintas áreas, como <b>Project Management</b>, <b>Front-end</b> y <b>Back-end</b>, cada uno con habilidades y experiencia específicas para contribuir en cada fase del proyecto.
-
                     En resumen, estamos aquí para ayudarle a llevar su visión digital al siguiente nivel y hacer realidad sus objetivos en línea.
                 </span>
 

@@ -7,23 +7,23 @@ import { Link } from 'react-router-dom';
 
 //pasamos por props los elementos de la card para después reemplazarlos por datos de la API
 export const Card = ({ id, title, content, views, created, isBigCard }) => {
-
+    // ${isBigCard ? 'hidden' : ''}${isBigCard ? 'justify-between w-[750px]' : ''}
     return (
         <>
             <Link to={`/article/${id}`}>
                 <div key={id}
+                    className={`w-[250px] h-[300px] flex flex-col items-center justify-center hover:bg-subtitle rounded  hover:bg-opacity-25 hover:-translate-y-2 ease-in duration-200 cursor-pointer animate__animated animate__fadeIn ${isBigCard ? 'big-card ' : ''}`}>
+                    <button className={` w-full h-[3px]  cursor-auto bg-alternative    flex rounded `}></button>
+                    <div className='w-full h-[200px] text-center md:text-start  px-2'>
+                        <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}</h1>
 
-                    className={`w-[250px] flex flex-col items-center  md:items-start hover:bg-subtitle rounded  hover:bg-opacity-25 hover:-translate-y-2 ease-in duration-200 cursor-pointer animate__animated animate__fadeIn ${isBigCard ? 'big-card ' : ''}`}>
-                    <button className={` w-full h-[3px]  cursor-auto bg-alternative    flex rounded ${isBigCard ? 'hidden' : ''}`}></button>
+                        <p className='mt-6 font-normalText text-center md:text-start  '>{content}</p>
+                    </div>
 
-                    <h1 className='mt-6 text-cards font-semibold text-cardsSize' >{title}</h1>
-
-                    <p className='mt-6 font-normalText text-start md:text-start '>{content}</p>
-
-                    <div className={`flex flex-row gap-12 mt-8 dates justify-between ${isBigCard ? 'justify-between w-[750px]' : ''}`}>
+                    <div className='flex flex-row gap-12 w-full p-2 h-auto mt-12 dates justify-between'>
                         <div className='flex flex-row items-center gap-1 text-subtitle'>
                             <AiOutlineEye size={18} />
-                            <p>{views}</p>
+                            <p>{views}15</p>
                         </div>
 
                         <div className='flex flex-row items-center gap-1 text-subtitle'>

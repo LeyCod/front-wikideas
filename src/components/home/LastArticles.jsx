@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '../Card';
-import { useFetch } from '../hooks/useFetch';
 
 export const LastArticles = () => {
     const [data, setData] = useState([])
@@ -28,8 +27,10 @@ export const LastArticles = () => {
                     <Card
                         key={item.id}
                         id={item.id}
-                        content={item.content}
-                        title={item.title.toUpperCase()}
+                        title={item.title.toUpperCase().slice(0, 15)}
+                        content={item.content.slice(0, 250)}
+                        created={item.created_at.slice(0, 10)}
+                        views={item.views}
 
                     />
                 ))}

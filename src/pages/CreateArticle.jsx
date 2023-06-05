@@ -3,6 +3,7 @@ import { CreatePopUp } from './CreatePopUp'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
+import { IoWarningOutline } from 'react-icons/io5'
 
 
 
@@ -57,8 +58,6 @@ export const CreateArticle = () => {
             .catch(error => console.error(error));
     };
 
-
-
     return (
         <div className='flex flex-col w-full p-4 justify-center items-start '>
             <h1 className='text-titleSize' >Crear Artículo</h1>
@@ -77,10 +76,13 @@ export const CreateArticle = () => {
                         autoFocus ></input>
 
                 </div>
-
+                <div className='flex flex-row items-center gap-2 mt-4 text-alternative'>
+                    <IoWarningOutline size={20} />
+                    <p><b>Atención</b>: El título no podrá ser modificado una vez que se cree el artículo</p>
+                </div>
                 <div className='h-auto flex items-center md:items-start w-[370px] md:w-full  mt-6'>
                     <textarea
-                        className='focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-subtitle bg-opacity-30 rounded '
+                        className='focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-subtitle bg-opacity-30 rounded w-[350px] md:w-[800px] h-[400px] '
                         name="content"
                         id="content"
                         value={formData.content}
@@ -88,7 +90,7 @@ export const CreateArticle = () => {
                         cols="100"
                         rows="10">
                     </textarea>
-                    <div className='absolute left-[81%] top-[127%] text-alternative font-bold'>{charCount} / 255</div>
+                    <div className='absolute left-[78%] top-[1280px] md:top-[160%] text-alternative font-bold'>{charCount} / 255</div>
                 </div>
 
             </form >
@@ -105,33 +107,3 @@ export const CreateArticle = () => {
 }
 
 
-
-//implementar quillJS
-
-
-
-/* <div className='flex flex-col mt-6'>
-                <h3 className='text-subtitleSize'>Contenido</h3>
-                <div className='flex flex-row gap-4 items-center  text-subtitle mt-4'>
-                    <BiBold size={18} />
-                    <BiItalic size={18} />
-                    <BiUnderline size={18} />
-                    <BiStrikethrough size={18} />
-                    <BiListUl size={18} />
-                    <RiDoubleQuotesL size={18} />
-                    <HiCodeBracket size={18} />
-                </div>
-            </div> */
-
-/* <ReactQuill
-                    name="content"
-                    id='content'
-                    theme='snow'
-                    value={formData.content}
-                    onChange={handleFormChange}
-
-                /> */
-
-
-
-    // 

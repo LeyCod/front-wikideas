@@ -31,6 +31,7 @@ export const FeaturedArticles = () => {
                         title={item.title.toUpperCase().slice(0, 15)}
                         content={item.content.slice(0, 250)}
                         created={item.created_at.slice(0, 10)}
+                        views={item.views}
                     />
                 ))}
             </div>
