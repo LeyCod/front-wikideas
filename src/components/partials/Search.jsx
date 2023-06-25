@@ -11,7 +11,7 @@ export const Search = () => {
 
     const searchArticles = async () => {
         try {
-            const response = await axios.get(`https://demo1-production.up.railway.app/entries/title/${title}`);
+            const response = await axios.get(`https://demo1-2-production.up.railway.app/entries/title/${title}`);
             setArticles(response.data);
             setSearched(true);
         } catch (error) {
@@ -53,15 +53,15 @@ export const Search = () => {
                 <button onClick={searchArticles} className='bg-buttons text-selected rounded shadow-md mt-2 shadow-title h-10 p-2'><AiOutlineSearch size={20} /></button>
 
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8  '>
+            <div className='flex flex-row gap-6 mt-8  '>
                 {searched && articles.length > 0 ? (
-                    <ul>
+                    <ul className="flex flex-row gap-6">
                         {articles.map(article => (
                             <Card
                                 id={article.id}
-                                title={article.title}
+                                title={article.title.slice(0, 30)}
                                 key={article.id}
-                                content={article.content.slice(0, 250)}
+                                content={article.content.slice(0, 150)}
                                 views={article.views}
                                 created={article.created_at.slice(0, 10)}
                             />

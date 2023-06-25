@@ -106,7 +106,7 @@ export const CreateArticle = () => {
                         rows="10"
                     >
                     </textarea>
-                    <div className='absolute left-[73%]  top-[1250px] md:top-[150%] text-alternative font-bold'>{charCount} / 1050</div>
+                    <div className='absolute left-[78%] top-[1280px] md:top-[160%] text-alternative font-bold'>{charCount} / 1050</div>
                 </div>
 
             </form >
