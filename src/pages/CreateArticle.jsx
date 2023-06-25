@@ -13,7 +13,6 @@ export const CreateArticle = () => {
     const [showPopup, setShowPopup] = useState(false);
 
     //states para manejar caracteres del textarea
-    const [value, setValue] = useState('');
     const [charCount, setCharCount] = useState(0);
 
     const navigate = useNavigate();
@@ -24,10 +23,15 @@ export const CreateArticle = () => {
         const inputValue = event.target.value;
         const inputLength = inputValue.length;
 
-        if (inputLength <= 255) {
-            setValue(inputValue);
+
+        if (inputLength <= 1050) {
+            setFormData({ ...formData, [event.target.name]: inputValue });
             setCharCount(inputLength);
+
+        } else {
+            setCharCount(1050)
         }
+
     };
 
     const handleSubmit = event => {
@@ -39,12 +43,23 @@ export const CreateArticle = () => {
                 icon: 'error',
                 title: 'Campos incompletos',
                 text: 'El título y el contenido no pueden estar vacíos!',
-            })
+            }
+            )
+            return;
+        }
+
+        if (formData.content.length > 1050) {
+            setShowPopup(false);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error de contenido',
+                text: 'El contenido no puede superar los 1050 caracteres!',
+            });
             return;
         }
         //levar esta func a otro componente
 
-        fetch(`https://demo1-production.up.railway.app/entries/store`, {
+        fetch(`https://demo1-2-production.up.railway.app/entries/store`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -80,7 +95,7 @@ export const CreateArticle = () => {
                     <IoWarningOutline size={20} />
                     <p><b>Atención</b>: El título no podrá ser modificado una vez que se cree el artículo</p>
                 </div>
-                <div className='h-auto flex items-center md:items-start w-[370px] md:w-full  mt-6'>
+                <div className='h-auto flex items-center md:items-start w-auto md:w-full  mt-6'>
                     <textarea
                         className='focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-subtitle bg-opacity-30 rounded w-[350px] md:w-[800px] h-[400px] '
                         name="content"
@@ -88,9 +103,10 @@ export const CreateArticle = () => {
                         value={formData.content}
                         onChange={handleFormChange}
                         cols="100"
-                        rows="10">
+                        rows="10"
+                    >
                     </textarea>
-                    <div className='absolute left-[78%] top-[1280px] md:top-[160%] text-alternative font-bold'>{charCount} / 255</div>
+                    <div className='absolute left-[73%]  top-[1250px] md:top-[150%] text-alternative font-bold'>{charCount} / 1050</div>
                 </div>
 
             </form >

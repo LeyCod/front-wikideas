@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { Card } from '../components/Card';
 import { AiOutlineCalendar, AiOutlineEye } from 'react-icons/ai';
 import { IoMdArrowDropleft } from 'react-icons/io'
-
 
 
 
@@ -19,7 +17,7 @@ export const ViewArticle = () => {
     }
 
     useEffect(() => {
-        fetch(`https://demo1-production.up.railway.app/entries/${id}`)
+        fetch(`https://demo1-2-production.up.railway.app/entries/${id}`)
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error(error));

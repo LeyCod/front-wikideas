@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import { useFetch } from '../components/hooks/useFetch';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
 import 'animate.css';
+import { featuredArticlesUrl } from '../constants/url';
 
 
 export const MoreVisited = () => {
@@ -12,7 +13,7 @@ export const MoreVisited = () => {
     const [numberPage, setNumberPage] = useState(6);
     const [hasMoreElements, setHasMoreElements] = useState(true);
 
-    const url = "https://demo1-production.up.railway.app/entries/featured";
+    const url = featuredArticlesUrl;
 
 
     useEffect(() => {
@@ -62,7 +63,7 @@ export const MoreVisited = () => {
                             <Card
                                 key={item.id}
                                 id={item.id}
-                                title={item.title.toUpperCase().slice(0, 15)}
+                                title={item.title.slice(0, 25)}
                                 content={item.content.slice(0, 150)}
                                 views={item.views}
                                 created={item.created_at.slice(0, 10)}

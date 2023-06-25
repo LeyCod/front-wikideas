@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Card } from '../components/Card';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
 import 'animate.css';
+import { lastArticlesUrl } from '../constants/url';
 
 
 
 export const LastArticlesComponent = () => {
     const [data, setData] = useState([])
 
-    const url = "https://demo1-production.up.railway.app/entries/last";
+    const url = lastArticlesUrl;
 
     useEffect(() => {
         fetch(url)
@@ -24,7 +25,7 @@ export const LastArticlesComponent = () => {
     const [hasMoreElements, setHasMoreElements] = useState(true);
 
 
-    const elementsPerPage = 9;
+    const elementsPerPage = 6;
     const totalElements = data.length + 1;
 
     const totalPages = Math.ceil(totalElements / elementsPerPage);
@@ -62,7 +63,7 @@ export const LastArticlesComponent = () => {
                             <Card
                                 key={item.id}
                                 id={item.id}
-                                title={item.title.toUpperCase().slice(0, 15)}
+                                title={item.title.slice(0, 30)}
                                 content={item.content.slice(0, 150)}
                                 views={item.views}
                                 created={item.created_at.slice(0, 10)}

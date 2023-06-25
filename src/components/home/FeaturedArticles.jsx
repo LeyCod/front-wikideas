@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from '../Card';
-import { useFetch } from '../hooks/useFetch'
+
 
 export const FeaturedArticles = () => {
     const [data, setData] = useState([])
-    const url = "https://demo1-production.up.railway.app/entries/featured";
+    const url = "https://demo1-2-production.up.railway.app/entries/featured";
 
 
     useEffect(() => {
@@ -28,8 +28,8 @@ export const FeaturedArticles = () => {
                     <Card
                         key={item.id}
                         id={item.id}
-                        title={item.title.toUpperCase().slice(0, 15)}
-                        content={item.content.slice(0, 250)}
+                        title={item.title.slice(0, 30)}
+                        content={item.content.slice(0, 150)}
                         created={item.created_at.slice(0, 10)}
                         views={item.views}
                     />

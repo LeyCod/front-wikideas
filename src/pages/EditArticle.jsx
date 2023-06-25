@@ -18,7 +18,7 @@ export const EditArticle = () => {
 
     //recupera el articulo por su id
     useEffect(() => {
-        fetch(`https://demo1-production.up.railway.app/entries/${id}`)
+        fetch(`https://demo1-2-production.up.railway.app/entries/${id}`)
             .then(response => response.json())
             .then(data => {
                 setData(data);
@@ -45,7 +45,7 @@ export const EditArticle = () => {
     //define el metodo y edita la entrie por su id, la devuelve en forma de string
     const handleSubmit = event => {
         event.preventDefault();
-        fetch(`https://demo1-production.up.railway.app/entries/${id}`, {
+        fetch(`https://demo1-2-production.up.railway.app/entries/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

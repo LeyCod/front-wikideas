@@ -64,7 +64,7 @@ export const NavBar = () => {
             </div>
 
 
-            <div className={!active ? 'absolute left-0 top-0 w-[60%] h-[450px]  border-r-subtitle bg-cards ease-in-out duration-500' : 'fixed left-[-100%]'}>
+            <div className={!active ? 'absolute left-0 top-0 w-[60%] h-[500px]  border-r-subtitle bg-cards ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <div className='flex flex-col items-center '>
                     <div className='flex flex-col items-center'>
                         <img className='mt-4' src={logo} width={80}></img>
@@ -93,8 +93,12 @@ export const NavBar = () => {
                             <AiOutlineEye size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Más visitados</p>
                         </Link>
+                        <Link to="about" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                            <AiOutlineTeam className='text-alternative' size={20} />
+                            <p className='text-selected text-normalText'>Nosotros</p>
+                        </Link>
                     </div>
-                    <button className='mt-8 text-selected bg-alternative rounded p-1 ml-44 ' onClick={onCloseNav}><AiOutlineClose size={24} /></button>
+                    <button className='mt-8 text-selected bg-alternative rounded p-2  ml-44 ' onClick={onCloseNav}><AiOutlineClose size={24} /></button>
                 </div>
             </div>
         </div>
