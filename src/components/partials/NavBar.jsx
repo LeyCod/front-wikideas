@@ -18,6 +18,8 @@ export const NavBar = () => {
         setActive(true)
     }
 
+
+
     return (
         <div className=' w-[20%] h-[100%]    flex flex-row md:flex-col items-center justify-start    '>
 
@@ -31,7 +33,7 @@ export const NavBar = () => {
             <ul className='hidden md:flex flex-col'>
 
                 <div className='flex flex-col gap-6 mt-8'>
-                    <Link to="create" className='flex flex-row gap-2 place-items-center text-alternative hover:text-nabvar-active text-cardsSize '>
+                    <Link onClick={onCloseNav} to="create" className='flex flex-row gap-2 place-items-center text-alternative hover:text-nabvar-active text-cardsSize '>
                         <AiOutlineEdit size={20} className='text-title' />
                         <p className='text-alternative'>Crear artículo</p>
                     </Link>
@@ -74,26 +76,26 @@ export const NavBar = () => {
 
 
                     <div className='flex flex-col items-start'>
-                        <Link to="create" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize '>
+                        <Link onClick={onCloseNav} to="create" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize '>
                             <AiOutlineEdit size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Crear artículo</p>
                         </Link>
 
-                        <Link to="/" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link onClick={onCloseNav} to="/" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineHome size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Inicio</p>
                         </Link>
 
-                        <Link to="last" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link onClick={onCloseNav} to="last" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineBell size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Últimos ingresos</p>
                         </Link>
 
-                        <Link to="visited" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link onClick={onCloseNav} to="visited" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineEye size={20} className='text-alternative' />
                             <p className='text-selected text-normalText'>Más visitados</p>
                         </Link>
-                        <Link to="about" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
+                        <Link onClick={onCloseNav} to="about" className='flex flex-row gap-2 items-center mt-6  text-alternative hover:text-nabvar-active text-cardsSize'>
                             <AiOutlineTeam className='text-alternative' size={20} />
                             <p className='text-selected text-normalText'>Nosotros</p>
                         </Link>
