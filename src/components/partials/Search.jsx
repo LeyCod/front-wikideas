@@ -44,7 +44,7 @@ export const Search = () => {
             <div className='w-full flex flex-row mt-6'>
 
                 <input
-                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2 bg-subtitle bg-opacity-20'
+                    className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2 bg-selected bg-opacity-20'
                     type="text"
                     value={title}
                     onChange={handleInputChange}

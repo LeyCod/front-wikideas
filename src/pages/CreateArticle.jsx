@@ -84,7 +84,7 @@ export const CreateArticle = () => {
                         id='title'
                         value={formData.title}
                         onChange={handleFormChange}
-                        className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2  bg-subtitle bg-opacity-30 border-opacity-30 
+                        className='rounded shadow-md mt-2 shadow-title w-full md:w-[100%] h-10 p-2  bg-selected bg-opacity-30 border-opacity-30 
                         focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 text-cardsSize '
                         type="text"
                         placeholder="Título del artículo"
@@ -97,7 +97,8 @@ export const CreateArticle = () => {
                 </div>
                 <div className='h-auto flex items-center md:items-start w-auto md:w-full  mt-6'>
                     <textarea
-                        className='focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-subtitle bg-opacity-30 rounded w-[350px] md:w-[800px] h-[400px] '
+                        className='focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-selected bg-opacity-30 rounded w-[350px] md:w-[800px] h-[400px] '
+                        placeholder='Desarrolla tu artículo aquí'
                         name="content"
                         id="content"
                         value={formData.content}

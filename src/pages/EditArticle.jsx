@@ -77,17 +77,18 @@ export const EditArticle = () => {
                 <div className='flex flex-col gap-4 items-center md:items-start p-4 md:p-0  text-subtitle mt-4 max-w-[1140px] '>
                     <h4 className=' p-4 md:p-0 font-bold text-subtitleSize'>Contenido</h4>
                     <textarea
-                        className='text-title focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-subtitle bg-opacity-30 rounded text-start w-[350px] md:w-[800px] h-[400px] '
+                        className='text-title focus:outline-none focus:border-subtitle focus:ring-subtitle focus:ring-2 bg-selected bg-opacity-30 rounded text-start w-[350px] md:w-[800px] h-[400px] '
                         id="content"
                         name="content"
                         value={formData.content}
                         onChange={handleFormChange}
+                        placeholder='editar'
                     />
                     <div className='absolute left-[78%] top-[1240px] md:top-[150%] text-alternative font-bold'>{charCount} / 255</div>
 
                 </div>
                 <div className='flex flex-row justify-between mt-6'>
-                    <button className='bg-buttons text-selected p-1 rounded' type="submit">Editar Artículo</button>
+                    <button className='bg-buttons text-selected p-1 rounded' type="submit">Guardar</button>
 
                     <button className='text-alternative font-bold' type="button" onClick={handleCancel}>Volver</button>
                 </div>
